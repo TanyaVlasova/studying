@@ -1,0 +1,27 @@
+@font-face {
+    font-family: Graphik;
+    src: url('./GraphikLCG-Light.ttf');
+    font-weight: 300;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Graphik;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+}
+
+.box{
+    height: 600px;
+    width: 600px;
+    background-color: rgb(228, 228, 181);
+    margin: auto;
+    box-shadow: 25px 15px rgb(80, 79, 70);
+}
