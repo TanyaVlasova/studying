@@ -1,0 +1,236 @@
+@font-face {
+    font-family: Graphik;
+    src: url('fonts/GraphikLCG-Light.ttf');
+    font-weight: 300;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Graphik;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 120%;
+}
+
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.box{
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.box1,
+.box2,
+.box3{
+    height: 500px;
+    padding: 50px 20px;
+}
+
+.box4,
+.box5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+}
+
+.box1__button,
+.box3__button{
+    height: 80px;
+    width: 350px;
+    display: block;
+    margin: 0 auto 50px;
+    letter-spacing: 0.08em;
+    border: none;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: bold;    
+    background: rgb(225,224,242);
+    background: linear-gradient(90deg, rgba(225,224,242,1) 0%, rgba(245,245,250,1) 100%);
+}
+
+
+
+/* Tasks */
+.box1__text{
+    width: 80%;
+    margin: 0 auto 20px;
+}
+
+.box1__list{
+    width: 80%;
+    margin: auto; 
+}
+
+
+/* Notifications */
+.notice{
+    width: 80%;
+    min-height: 100px;
+    padding: 15px;
+    margin: 5px auto;
+    position: relative;
+    background: rgb(225,224,242);
+    background: linear-gradient(90deg, rgba(225,224,242,1) 0%, rgba(245,245,250,1) 100%);
+}
+
+.notice__person{
+    font-weight: bold;
+}
+
+.notice__message{
+    font-size: 18px;
+}
+
+.notice__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+
+/* Dropdown menu */
+
+.box3__button-text{
+    font-weight: bold;
+    position: relative;
+}
+
+.box3__button-text::before{
+    content: '►';
+    position: absolute;
+    top: -3px;
+    left: -25px;
+    font-size: 20px;
+}
+.open .box3__button-text::before{
+    content: '▼';
+    position: absolute;
+    top: -1px;
+    left: -25px;
+    font-size: 20px;
+}
+
+.box3__list{
+    width: 80%;
+    margin: auto;
+    display: none;
+}
+
+.open .box3__list{
+    display: block;
+}
+
+
+/* Football */
+.field{
+    width: 800px;
+    height: 450px;
+    border: 20px solid rgb(0, 0, 0);
+    margin: auto;
+    position: relative;
+}
+
+.ball{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 1s ease-out;
+    top: calc(50% - 25px);
+    left: calc(50% - 25px);
+}
+
+.ball__image{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Сarousel */
+.carousel{
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+    display: flex;
+}
+
+.carousel__button{
+    width: 40px;
+    height: 50px;
+    margin: auto;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.carousel__arrow{
+    width: 100%;
+    height: 100%;
+}
+
+.carousel__container{
+    width: 810px;
+    height: 250px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel__list{
+    white-space: nowrap;
+    height: 100%;
+    list-style: none;
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 1s;
+}
+
+.carousel__item{
+    height: 250px;
+    width: 250px;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.carousel__item:last-child{
+    margin-right: 0;
+}
+
+.carousel__image{
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
