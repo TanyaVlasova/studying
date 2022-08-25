@@ -1,0 +1,54 @@
+@font-face {
+    font-family: Graphik;
+    src: url(GraphikLCG-Light.ttf);
+    font-weight: 300;
+}
+
+/* +General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 300 20px/120% Graphik;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.container{
+    display: grid;
+}
+
+.box{
+    height: 100vh;
+    display: grid;
+    background-color: rgb(218, 227, 241);
+}
+/* -General */
+
+/* +1 task */
+.mult{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+}
+
+.mult__text{
+    margin-bottom: 20px;
+}
+
+.mult__list{
+    width: 500px;
+    border: 1px solid #888;
+}
+
+.mult__item{
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+.selected{
+    background-color: #fff;
+}
+/* -1 task */
