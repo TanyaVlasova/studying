@@ -1,0 +1,85 @@
+@font-face {
+    font-family: Graphik;
+    src: url(GraphikLCG-Light.ttf);
+    font-weight: 300;
+}
+
+/* +General */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: 300 20px/120% Graphik;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.box{
+    height: 100vh;
+    display: grid;
+    background-color: rgb(218, 227, 241);
+}
+/* -General */
+
+/* +1 task */
+.slider{
+    width: 500px;
+    height: 30px;
+    margin: auto;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+.thumb{
+    width: 20px;
+    height: 50px;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    left: 30px;
+    background-color: rgb(87, 95, 141);
+    cursor: pointer;
+}
+/* -1 task */
+
+/* +2 task */
+.field{
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    margin: auto;
+    position: relative;
+}
+
+.circle{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: rgb(87, 95, 141);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.goal{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(218, 227, 241);
+    position: absolute;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+}
+
+.goal-hover{
+    background-color: rgb(173, 185, 204);
+}
+/* -2 task */
