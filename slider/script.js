@@ -1,3 +1,4 @@
+/* +slider */
 const slider = document.querySelector('.slider');
 let activeSlide = null;
 slider.addEventListener('click', showSlide);
@@ -11,3 +12,4 @@ function showSlide(event) {
     activeSlide = slide;
     activeSlide.classList.add('active');
 }
+/* -slider */
